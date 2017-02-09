@@ -1,0 +1,1249 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY edxl_cap "http://fpc.ufba.br/ontologies/edxl_cap#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://fpc.ufba.br/ontologies/edxl_de#"
+     xml:base="http://fpc.ufba.br/ontologies/edxl_de"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:edxl_cap="http://fpc.ufba.br/ontologies/edxl_cap#">
+    <owl:Ontology rdf:about="http://fpc.ufba.br/ontologies/edxl_de">
+        <edxl_cap:rights xml:lang="en">(c) The RESCUER project - http://www.rescuer-project.org/</edxl_cap:rights>
+        <edxl_cap:status xml:lang="en">An ongoing ontology for communication interoperability between systems in the context of the RESCUER Project. This propose is based on EDXL documentation (https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=emergency).</edxl_cap:status>
+        <edxl_cap:contributor xml:lang="en">Lais Salvador (UFBA)</edxl_cap:contributor>
+        <edxl_cap:contributor xml:lang="en">Rebeca Barros (UFBA)</edxl_cap:contributor>
+        <edxl_cap:contributor xml:lang="en">Reinaldo Almeida (UFBA)</edxl_cap:contributor>
+        <owl:imports rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#hasCertainty -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#hasCertainty">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Certainty"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#isCertaintyOf"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#hasSender -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#hasSender"/>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#hasSeverity -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#hasSeverity">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Severity"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#isSeverityOf"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#hasUrgency -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#hasUrgency">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Urgency"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#isUrgencyOf"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#isCertaintyOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#isCertaintyOf">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#isSeverityOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#isSeverityOf">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#isUrgencyOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#isUrgencyOf">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#TargetAreas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasAreaKind -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasAreaKind">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaKind"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#TargetAreas"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#isAreaKindOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasConfidentiality -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasConfidentiality">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Confidentiality"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Descriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasConsumerRole -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasConsumerRole">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ConsumerRole"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasContent -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasContent"/>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasContentDescriptor -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasContentDescriptor">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasContentObject -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasContentObject"/>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasDescriptor -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasDescriptor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionKind -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionKind">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionStatus -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionStatus">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasIncidentRelated -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasIncidentRelated">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Incident"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasOriginatorRole -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasOriginatorRole">
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor"/>
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#OriginatorRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasRecipientRole -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasRecipientRole">
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#RecipientRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasTargetArea -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasTargetArea">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#TargetArea"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#TargetAreas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#hasTargetAreas -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#hasTargetAreas">
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#TargetAreas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isAreaGroupingOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isAreaGroupingOf">
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isAreaKindOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isAreaKindOf"/>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isConfidentialityOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isConfidentialityOf">
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasConfidentiality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isConsumerRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isConsumerRoleOf">
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasConsumerRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isContentDescriptorOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isContentDescriptorOf">
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor"/>
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentObject"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasContentDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isContentObjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isContentObjectOf">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Content"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentObject"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasContentObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isContentOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isContentOf">
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isDescriptorOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isDescriptorOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Descriptor"/>
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionKindOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionKindOf">
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionStatusOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionStatusOf">
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus"/>
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isIncidentRelatedOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isIncidentRelatedOf">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Descriptor"/>
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasIncidentRelated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isLinkedTo -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isLinkedTo">
+        <rdfs:range rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Content"/>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isOriginatorRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isOriginatorRoleOf">
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasOriginatorRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isRecipientRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isRecipientRoleOf">
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasRecipientRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isTargetAreaOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isTargetAreaOf">
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasTargetArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#isTargetAreasOf -->
+
+    <owl:ObjectProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#isTargetAreasOf">
+        <owl:inverseOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasTargetAreas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#contentData -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#contentData">
+        <rdfs:comment xml:lang="en">The base-64 encoded data content.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#OtherContent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#contentDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#contentDescription">
+        <rdfs:comment xml:lang="en">The human-readable text describing the content object.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#contentID -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#contentID">
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#dateTimeExpires -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#dateTimeExpires">
+        <rdfs:comment xml:lang="en">The date and time the distribution message should expire.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+        <rdfs:subPropertyOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#timePeriod"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#dateTimeSent -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#dateTimeSent">
+        <rdfs:comment xml:lang="en">The date and time the distribution message was sent.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+        <rdfs:subPropertyOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#timePeriod"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#digest -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#digest">
+        <rdfs:comment xml:lang="en">The digest value for the payload.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#OtherContent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#distributionID -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#distributionID">
+        <rdfs:comment xml:lang="en">The unique identifier of this distribution message.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#explicitAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#explicitAddress">
+        <rdfs:comment xml:lang="en">The identifier of an explicit recipient</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Descriptor"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#incidentDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#incidentDescription">
+        <rdfs:comment xml:lang="en">The human-readable text describing the incident/event/situation associated</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Incident"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#incidentID -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#incidentID">
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Incident"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#keyword">
+        <rdfs:comment xml:lang="en">The topic related to the distribution message, as it may determine message routing decisions.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Descriptor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#language -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#language">
+        <rdfs:comment xml:lang="en">The primary language (but not necessarily exclusive) used in the payloads</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Descriptor"/>
+        <rdfs:range rdf:resource="&xsd;language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#mimeType -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#mimeType">
+        <rdfs:comment xml:lang="en">The format of the payload.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#OtherContent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#other -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#other">
+        <rdfs:comment>Special requirements allowing for signature of the content of a &lt;ContentObject&gt;.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentObject"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#senderID -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#senderID">
+        <rdfs:comment xml:lang="en">The unique identifier of the sender.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Sender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#senderRole -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#senderRole">
+        <rdfs:comment xml:lang="en">The functional role of the sender, as it may determine message routing decisions. </rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Sender"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#size -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#size">
+        <rdfs:comment xml:lang="en">The file size of the payload.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#OtherContent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#timePeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#timePeriod"/>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#uri -->
+
+    <owl:DatatypeProperty rdf:about="http://fpc.ufba.br/ontologies/edxl_de#uri">
+        <rdfs:comment xml:lang="en">A Uniform Resource Identifier that can be used to retrieve the identified resource.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#OtherContent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Actual -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Actual">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus"/>
+        <rdfs:comment xml:lang="en">&quot;Real-world&quot; information for action</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Certainty -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Certainty">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#CertaintyUnknown -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#CertaintyUnknown">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Certainty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Exercise -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Exercise">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus"/>
+        <rdfs:comment xml:lang="en">Simulated information for exercise participants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Expected -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Expected">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Urgency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Extreme -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Extreme">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Severity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Future -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Future">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Urgency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Immediate -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Immediate">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Urgency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Incident -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Incident">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Likely -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Likely">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Certainty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Minor -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Minor">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Severity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Moderate -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Moderate">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Severity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Observed -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Observed">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Certainty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Past -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Past">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Urgency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Possible -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Possible">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Certainty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Sender -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Sender"/>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Severe -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Severe">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Severity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Severity -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Severity">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#SeverityUnknown -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#SeverityUnknown">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Severity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#System -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#System">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus"/>
+        <rdfs:comment xml:lang="en">Messages regarding or supporting network functions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Test -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Test">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus"/>
+        <rdfs:comment xml:lang="en">Discardable messages for technical testing only.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Unlikely -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Unlikely">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Certainty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#Urgency -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#Urgency">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_cap#UrgencyUnknown -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_cap#UrgencyUnknown">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Urgency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Ack -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Ack">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Cancel"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Dispatch"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Error"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Report"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Request"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Response"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorControl"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorDetection"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">Acknowledgment of receipt of an earlier message</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Reconhecimento do recebimento de uma mensagem anterior.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"/>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#AreaKind -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#AreaKind">
+        <rdfs:comment xml:lang="en">Specifies the kind of area, for example “target” or “source”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Cancel -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Cancel">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Dispatch"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Error"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Report"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Request"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Response"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorControl"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorDetection"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">A cancellation or revocation of a previous message</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Cancelamento ou revocação de uma mensagem anterior.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Classified -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Classified">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Confidentiality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Complement -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Complement">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Confidentiality -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Confidentiality">
+        <rdfs:comment xml:lang="en">Confidentiality of the combined distribution message’s content.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#ConsumerRole -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#ConsumerRole">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Content -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Content">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasContentObject"/>
+                <owl:onClass rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentObject"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A container for the ContentObject and any Links among content objects
+</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um recipiente para ContetObject e qualquer link entre eles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Descriptor"/>
+        <rdfs:comment xml:lang="en">The description of the message content object</rdfs:comment>
+        <rdfs:comment xml:lang="pt">A descrição da mensagem Contet Object</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#ContentObject -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#ContentObject">
+        <rdfs:comment xml:lang="en">The container element for message data and content.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O elemento recipiente para mensagens de dados e contéudo.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#ContentXML -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#ContentXML">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentObject"/>
+        <rdfs:comment xml:lang="en">Container for valid-namespaced XML data</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Conteiner para dados XML válidos com namespace. 
+
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Descriptor -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Descriptor">
+        <rdfs:comment xml:lang="en">A container of all of the substantive elements related to describing the distribution of the content messages as a whole.
+</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um recipiente de todos os elementos centrais relacionado com a descrição da distribuição das mensagens de conteúdo como um todo.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Dispatch -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Dispatch">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Error"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Report"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Request"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Response"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorControl"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorDetection"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">A commitment of resources or assistance</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um compromisso para recursos ou assistência</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Descriptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#DistributionKind -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind">
+        <rdfs:comment xml:lang="en">The function of the message</rdfs:comment>
+        <rdfs:comment xml:lang="pt">A função da mensagem. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus">
+        <rdfs:comment xml:lang="en">A capacidade de ação da mensagem. </rdfs:comment>
+        <rdfs:comment xml:lang="en">The action-ability of the message.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#hasSender"/>
+                        <owl:onClass rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap#Sender"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionKind"/>
+                        <owl:onClass rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionStatus"/>
+                        <owl:onClass rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasDescriptor"/>
+                        <owl:onClass rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A container of all of the elements related to the distribution of the content messages.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um recipiente de todos os elementos relacionados a distribuição do contéudo das mensagens.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentXML"/>
+        <rdfs:comment xml:lang="en">An open container for valid XML from an explicit namespaced XML Schema.
+</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um container aberto para XML válido vindo de um explícito XML Schema namespaced.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Error -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Error">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Report"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Request"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Response"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorControl"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorDetection"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">Rejection of an earlier message (for technical reasons)</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Rejeição de uma mensagem anterior (por razões técnicas)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#ExclusiveOr -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#ExclusiveOr">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Intersection -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Intersection">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#KeyXmlContent -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#KeyXmlContent">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentXML"/>
+        <rdfs:comment xml:lang="en">A container element for collected fragments of valid XML</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um container para fragmentos coletados de XML válido</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#OriginatorRole -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#OriginatorRole">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#OtherContent -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#OtherContent">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#ContentObject"/>
+        <rdfs:comment xml:lang="en">Container for content provided in a non-XML MIME type</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Container para contéudo disponibilizado em um tipo não XML</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#OtherGroupingType -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#OtherGroupingType">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#RecipientRole -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#RecipientRole">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Report -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Report">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Request"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Response"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorControl"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorDetection"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">New information regarding an incident or activity</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Nova informação a respeito de um incidente ou atividade.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Request -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Request">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Response"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorControl"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorDetection"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">A request for resources, information or action</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Uma requisição por recursos, informações ou ações.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Response -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Response">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorControl"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorDetection"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">A response to a previous request</rdfs:comment>
+        <rdfs:comment xml:lang="pt">A resposta a uma requisição anterior.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Role -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Role"/>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorControl"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">These messages are for reporting configuration during power up or after Installation or Maintenance.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Mensagens para reportar configurações durante a inicialização ou após instalação ou manutenção.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#SensorControl -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#SensorControl">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">These are messages used to control sensors/sensor concentrator components behavior</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Mensagens usadas para controlar o comportamento de sensores/componentes concentrados de sensores.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#SensorDetection -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#SensorDetection">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <rdfs:comment xml:lang="en">These are high priority messages which report sensor detections.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Mensagens de alta prioridade que reporta detecção dos sensores.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#SensorStatus -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#SensorStatus">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <owl:disjointWith rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Update"/>
+        <rdfs:comment xml:lang="en">These are concise messages which report sensors/sensor concentrator component status or state of health.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Mensagens concisas que relatam status ou estado de saúde de sensores/componentes concentrados de sensores.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#TargetArea -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#TargetArea">
+        <rdfs:comment xml:lang="en">The container element for location information</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Conteiner para informação de localização.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#TargetAreas -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#TargetAreas">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasTargetArea"/>
+                        <owl:someValuesFrom rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#TargetArea"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping"/>
+                        <owl:onClass rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#hasAreaKind"/>
+                        <owl:onClass rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaKind"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Unclassified -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Unclassified">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#Confidentiality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Union -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Union">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://fpc.ufba.br/ontologies/edxl_de#Update -->
+
+    <owl:Class rdf:about="http://fpc.ufba.br/ontologies/edxl_de#Update">
+        <rdfs:subClassOf rdf:resource="http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"/>
+        <rdfs:comment xml:lang="en">Updated information superseding a previous message</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Informação atualizada substituindo uma mensagem anterior.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
