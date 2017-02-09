@@ -278,7 +278,7 @@ edxl_cap:Severity
 <http://fpc.ufba.br/ontologies/edxl_de>
       a       owl:Ontology ;
       edxl_cap:contributor
-              "Reinaldo Almeida (UFBA)"@en , "Rebeca Barros (UFBA)"@en , "Lais Salvador (UFBA)"@en ;
+              "Reinaldo Almeida (UFBA, KIT)"@en , "Rebeca Barros (UFBA)"@en , "Lais Salvador (UFBA)"@en ;
       edxl_cap:rights "(c) The RESCUER project - http://www.rescuer-project.org/"@en ;
       edxl_cap:status "An ongoing ontology for communication interoperability between systems in the context of the RESCUER Project. This propose is based on EDXL documentation (https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=emergency)."@en ;
       owl:imports <http://fpc.ufba.br/ontologies/edxl_cap> .
