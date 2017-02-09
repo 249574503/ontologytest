@@ -14,16 +14,12 @@
 <http://fpc.ufba.br/ontologies/edxl_de#hasRecipientRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_de#ConsumerRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#Role> .
 <http://fpc.ufba.br/ontologies/edxl_de#ConsumerRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff3 .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff6 .
 <http://fpc.ufba.br/ontologies/edxl_cap#Severity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fed <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fed <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#AreaKind> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fed <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasAreaKind> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasDescriptor> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fec .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fef .
 <http://fpc.ufba.br/ontologies/edxl_de#SensorDetection> <http://www.w3.org/2000/01/rdf-schema#comment> "Mensagens de alta prioridade que reporta detec\u00E7\u00E3o dos sensores."@pt .
 <http://fpc.ufba.br/ontologies/edxl_de#SensorDetection> <http://www.w3.org/2000/01/rdf-schema#comment> "These are high priority messages which report sensor detections."@en .
 <http://fpc.ufba.br/ontologies/edxl_de#SensorDetection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#DistributionKind> .
@@ -54,16 +50,12 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#isContentDescriptorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://fpc.ufba.br/ontologies/edxl_de#ContentObject> .
 <http://fpc.ufba.br/ontologies/edxl_de#isContentDescriptorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor> .
 <http://fpc.ufba.br/ontologies/edxl_de#isContentDescriptorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff9 .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_de#isAreaKindOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_cap#Sender> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_cap#hasSender> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_cap#hasSender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_de#Confidentiality> <http://www.w3.org/2000/01/rdf-schema#comment> "Confidentiality of the combined distribution message\u2019s content."@en .
 <http://fpc.ufba.br/ontologies/edxl_de#Confidentiality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff7 .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A2517ae04X3aX15a23647b64X3aXX2dX7ffa .
 <http://fpc.ufba.br/ontologies/edxl_de#OriginatorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#Role> .
 <http://fpc.ufba.br/ontologies/edxl_de#OriginatorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_de#Complement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping> .
@@ -87,15 +79,19 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#hasConsumerRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor> .
 <http://fpc.ufba.br/ontologies/edxl_de#hasConsumerRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://fpc.ufba.br/ontologies/edxl_de#ConsumerRole> .
 <http://fpc.ufba.br/ontologies/edxl_de#hasConsumerRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff4 .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasDescriptor> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fed <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fed <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#AreaKind> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fed <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasAreaKind> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The action-ability of the message."@en .
 <http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "A capacidade de a\u00E7\u00E3o da mensagem. "@en .
 <http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Past> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_cap#Urgency> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Past> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A2517ae04X3aX15a23647b64X3aXX2dX7fed .
 <http://fpc.ufba.br/ontologies/edxl_de#ContentXML> <http://www.w3.org/2000/01/rdf-schema#comment> "Conteiner para dados XML v\u00E1lidos com namespace. \n\n"@pt .
 <http://fpc.ufba.br/ontologies/edxl_de#ContentXML> <http://www.w3.org/2000/01/rdf-schema#comment> "Container for valid-namespaced XML data"@en .
 <http://fpc.ufba.br/ontologies/edxl_de#ContentXML> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#ContentObject> .
@@ -126,8 +122,12 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_cap#isCertaintyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_de#Content> <http://www.w3.org/2000/01/rdf-schema#comment> "Um recipiente para ContetObject e qualquer link entre eles."@pt .
 <http://fpc.ufba.br/ontologies/edxl_de#Content> <http://www.w3.org/2000/01/rdf-schema#comment> "A container for the ContentObject and any Links among content objects\n"@en .
-<http://fpc.ufba.br/ontologies/edxl_de#Content> <http://www.w3.org/2002/07/owl#equivalentClass> _:A2517ae04X3aX15a23647b64X3aXX2dX7ffc .
+<http://fpc.ufba.br/ontologies/edxl_de#Content> <http://www.w3.org/2002/07/owl#equivalentClass> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffc .
 <http://fpc.ufba.br/ontologies/edxl_de#Content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_cap#Sender> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_cap#hasSender> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_de#RecipientRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#Role> .
 <http://fpc.ufba.br/ontologies/edxl_de#RecipientRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_de#other> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#ContentObject> .
@@ -146,8 +146,10 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#Dispatch> <http://www.w3.org/2002/07/owl#disjointWith> <http://fpc.ufba.br/ontologies/edxl_de#Response> .
 <http://fpc.ufba.br/ontologies/edxl_de#Dispatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#DistributionKind> .
 <http://fpc.ufba.br/ontologies/edxl_de#Dispatch> <http://www.w3.org/2002/07/owl#disjointWith> <http://fpc.ufba.br/ontologies/edxl_de#SensorDetection> .
-<http://fpc.ufba.br/ontologies/edxl_de#TargetAreas> <http://www.w3.org/2002/07/owl#equivalentClass> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff2 .
+<http://fpc.ufba.br/ontologies/edxl_de#TargetAreas> <http://www.w3.org/2002/07/owl#equivalentClass> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff2 .
 <http://fpc.ufba.br/ontologies/edxl_de#TargetAreas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff7 .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffa .
 <http://fpc.ufba.br/ontologies/edxl_cap#SeverityUnknown> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_cap#Severity> .
 <http://fpc.ufba.br/ontologies/edxl_cap#SeverityUnknown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Extreme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_cap#Severity> .
@@ -164,15 +166,13 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#SensorControl> <http://www.w3.org/2002/07/owl#disjointWith> <http://fpc.ufba.br/ontologies/edxl_de#SensorStatus> .
 <http://fpc.ufba.br/ontologies/edxl_de#SensorControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#DistributionKind> .
 <http://fpc.ufba.br/ontologies/edxl_de#SensorControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#DistributionKind> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionKind> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Sender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff4 .
 <http://fpc.ufba.br/ontologies/edxl_cap#Unlikely> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_cap#Certainty> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Unlikely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#intersectionOf> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff0 .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fed .
 <http://fpc.ufba.br/ontologies/edxl_cap#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_cap#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor> .
 <http://fpc.ufba.br/ontologies/edxl_cap#hasSeverity> <http://www.w3.org/2002/07/owl#inverseOf> <http://fpc.ufba.br/ontologies/edxl_cap#isSeverityOf> .
@@ -236,10 +236,10 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#isTargetAreaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_de#Classified> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#Confidentiality> .
 <http://fpc.ufba.br/ontologies/edxl_de#Classified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Um container aberto para XML v\u00E1lido vindo de um expl\u00EDcito XML Schema namespaced."@pt .
-<http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent> <http://www.w3.org/2000/01/rdf-schema#comment> "An open container for valid XML from an explicit namespaced XML Schema.\n"@en .
-<http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#ContentXML> .
-<http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#DistributionKind> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionKind> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_de#keyword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://fpc.ufba.br/ontologies/edxl_de#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#Descriptor> .
 <http://fpc.ufba.br/ontologies/edxl_de#keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "The topic related to the distribution message, as it may determine message routing decisions."@en .
@@ -251,8 +251,10 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de> <http://fpc.ufba.br/ontologies/edxl_cap#status> "An ongoing ontology for communication interoperability between systems in the context of the RESCUER Project. This propose is based on EDXL documentation (https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=emergency)."@en .
 <http://fpc.ufba.br/ontologies/edxl_de> <http://fpc.ufba.br/ontologies/edxl_cap#rights> "(c) The RESCUER project - http://www.rescuer-project.org/"@en .
 <http://fpc.ufba.br/ontologies/edxl_de> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff5 .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff8 .
+<http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Um container aberto para XML v\u00E1lido vindo de um expl\u00EDcito XML Schema namespaced."@pt .
+<http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent> <http://www.w3.org/2000/01/rdf-schema#comment> "An open container for valid XML from an explicit namespaced XML Schema.\n"@en .
+<http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#ContentXML> .
+<http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_de#contentData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#OtherContent> .
 <http://fpc.ufba.br/ontologies/edxl_de#contentData> <http://www.w3.org/2000/01/rdf-schema#comment> "The base-64 encoded data content."@en .
 <http://fpc.ufba.br/ontologies/edxl_de#contentData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -262,6 +264,8 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#isDescriptorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#Descriptor> .
 <http://fpc.ufba.br/ontologies/edxl_de#isDescriptorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
 <http://fpc.ufba.br/ontologies/edxl_de#isDescriptorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff0 .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_de#Request> <http://www.w3.org/2000/01/rdf-schema#comment> "Uma requisi\u00E7\u00E3o por recursos, informa\u00E7\u00F5es ou a\u00E7\u00F5es."@pt .
 <http://fpc.ufba.br/ontologies/edxl_de#Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://fpc.ufba.br/ontologies/edxl_de#SensorDetection> .
 <http://fpc.ufba.br/ontologies/edxl_de#Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration> .
@@ -326,9 +330,6 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionStatusOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution> .
 <http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionStatusOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus> .
 <http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionStatusOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://fpc.ufba.br/ontologies/edxl_de#TargetArea> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasTargetArea> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_de#mimeType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#OtherContent> .
 <http://fpc.ufba.br/ontologies/edxl_de#mimeType> <http://www.w3.org/2000/01/rdf-schema#comment> "The format of the payload."@en .
 <http://fpc.ufba.br/ontologies/edxl_de#mimeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -353,12 +354,10 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#contentDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor> .
 <http://fpc.ufba.br/ontologies/edxl_de#contentDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The human-readable text describing the content object."@en .
 <http://fpc.ufba.br/ontologies/edxl_de#contentDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff5 .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff8 .
 <http://fpc.ufba.br/ontologies/edxl_de#isConfidentialityOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://fpc.ufba.br/ontologies/edxl_de#hasConfidentiality> .
 <http://fpc.ufba.br/ontologies/edxl_de#isConfidentialityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionStatus> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_de#isOriginatorRoleOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://fpc.ufba.br/ontologies/edxl_de#hasOriginatorRole> .
 <http://fpc.ufba.br/ontologies/edxl_de#isOriginatorRoleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#TargetAreas> .
@@ -366,10 +365,6 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_cap#isUrgencyOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_cap#isUrgencyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fef <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fef <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fef <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Immediate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_cap#Urgency> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Immediate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_de#SensorStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Mensagens concisas que relatam status ou estado de sa\u00FAde de sensores/componentes concentrados de sensores."@pt .
@@ -377,6 +372,9 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#SensorStatus> <http://www.w3.org/2002/07/owl#disjointWith> <http://fpc.ufba.br/ontologies/edxl_de#Update> .
 <http://fpc.ufba.br/ontologies/edxl_de#SensorStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#DistributionKind> .
 <http://fpc.ufba.br/ontologies/edxl_de#SensorStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://fpc.ufba.br/ontologies/edxl_de#TargetArea> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasTargetArea> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_de#senderRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_cap#Sender> .
 <http://fpc.ufba.br/ontologies/edxl_de#senderRole> <http://www.w3.org/2000/01/rdf-schema#comment> "The functional role of the sender, as it may determine message routing decisions. "@en .
 <http://fpc.ufba.br/ontologies/edxl_de#senderRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -389,8 +387,6 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#hasTargetAreas> <http://www.w3.org/2000/01/rdf-schema#range> <http://fpc.ufba.br/ontologies/edxl_de#TargetAreas> .
 <http://fpc.ufba.br/ontologies/edxl_de#hasTargetAreas> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor> .
 <http://fpc.ufba.br/ontologies/edxl_de#hasTargetAreas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A2517ae04X3aX15a23647b64X3aXX2dX7fee .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff1 .
 <http://fpc.ufba.br/ontologies/edxl_de#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_de#AreaKind> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the kind of area, for example \u201Ctarget\u201D or \u201Csource\u201D"@en .
 <http://fpc.ufba.br/ontologies/edxl_de#AreaKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -399,10 +395,6 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#hasConfidentiality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Observed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_cap#Certainty> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Observed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#ContentObject> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasContentObject> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_de#isRecipientRoleOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://fpc.ufba.br/ontologies/edxl_de#hasRecipientRole> .
 <http://fpc.ufba.br/ontologies/edxl_de#isRecipientRoleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Certainty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
@@ -417,18 +409,24 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_cap#isSeverityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Severe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_cap#Severity> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Severe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionStatus> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fef <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fef <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fef <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Minor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_cap#Severity> .
 <http://fpc.ufba.br/ontologies/edxl_cap#Minor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://fpc.ufba.br/ontologies/edxl_de#isContentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://fpc.ufba.br/ontologies/edxl_de#hasContent> .
 <http://fpc.ufba.br/ontologies/edxl_de#isContentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff3 .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff6 .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A2517ae04X3aX15a23647b64X3aXX2dX7fec .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A2517ae04X3aX15a23647b64X3aXX2dX7fef .
 <http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Um recipiente de todos os elementos relacionados a distribui\u00E7\u00E3o do cont\u00E9udo das mensagens."@pt .
 <http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution> <http://www.w3.org/2000/01/rdf-schema#comment> "A container of all of the elements related to the distribution of the content messages."@en .
-<http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution> <http://www.w3.org/2002/07/owl#equivalentClass> _:A2517ae04X3aX15a23647b64X3aXX2dX7ffb .
+<http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution> <http://www.w3.org/2002/07/owl#equivalentClass> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffb .
 <http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7fee .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ff1 .
 <http://fpc.ufba.br/ontologies/edxl_de#Report> <http://www.w3.org/2002/07/owl#disjointWith> <http://fpc.ufba.br/ontologies/edxl_de#SensorControl> .
 <http://fpc.ufba.br/ontologies/edxl_de#Report> <http://www.w3.org/2000/01/rdf-schema#comment> "Nova informa\u00E7\u00E3o a respeito de um incidente ou atividade."@pt .
 <http://fpc.ufba.br/ontologies/edxl_de#Report> <http://www.w3.org/2002/07/owl#disjointWith> <http://fpc.ufba.br/ontologies/edxl_de#Update> .
@@ -455,8 +453,10 @@ _:A2517ae04X3aX15a23647b64X3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://fpc.ufba.br/ontologies/edxl_de#hasContentObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://fpc.ufba.br/ontologies/edxl_de#Intersection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping> .
 <http://fpc.ufba.br/ontologies/edxl_de#Intersection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#intersectionOf> _:A2517ae04X3aX15a23647b64X3aXX2dX7ff9 .
-_:A2517ae04X3aX15a23647b64X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onClass> <http://fpc.ufba.br/ontologies/edxl_de#ContentObject> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://fpc.ufba.br/ontologies/edxl_de#hasContentObject> .
+_:AX2dXf75ec28X3aX15a2396b169X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://fpc.ufba.br/ontologies/edxl_de#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://fpc.ufba.br/ontologies/edxl_de#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fpc.ufba.br/ontologies/edxl_cap#Incident> .
 <http://fpc.ufba.br/ontologies/edxl_de#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The human-readable text describing the incident/event/situation associated"@en .
