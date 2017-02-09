@@ -22,7 +22,7 @@
         <edxl_cap:status xml:lang="en">An ongoing ontology for communication interoperability between systems in the context of the RESCUER Project. This propose is based on EDXL documentation (https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=emergency).</edxl_cap:status>
         <edxl_cap:contributor xml:lang="en">Lais Salvador (UFBA)</edxl_cap:contributor>
         <edxl_cap:contributor xml:lang="en">Rebeca Barros (UFBA)</edxl_cap:contributor>
-        <edxl_cap:contributor xml:lang="en">Reinaldo Almeida (UFBA)</edxl_cap:contributor>
+        <edxl_cap:contributor xml:lang="en">Reinaldo Almeida (UFBA, KIT)</edxl_cap:contributor>
         <owl:imports rdf:resource="http://fpc.ufba.br/ontologies/edxl_cap"/>
     </owl:Ontology>
     
