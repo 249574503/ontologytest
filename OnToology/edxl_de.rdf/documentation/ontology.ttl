@@ -1,0 +1,636 @@
+@prefix :        <http://fpc.ufba.br/ontologies/edxl_de#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix edxl_cap:  <http://fpc.ufba.br/ontologies/edxl_cap#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+edxl_cap:Test
+      a       owl:Class ;
+      rdfs:comment "Discardable messages for technical testing only."@en ;
+      rdfs:subClassOf :DistributionStatus .
+
+:Ack  a       owl:Class ;
+      rdfs:comment "Reconhecimento do recebimento de uma mensagem anterior."@pt , "Acknowledgment of receipt of an earlier message"@en ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update , :Report , :Error , :SensorControl , :Cancel , :SensorDetection , :SensorConfiguration , :Request , :Dispatch , :Response .
+
+:distributionID
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The unique identifier of this distribution message."@en ;
+      rdfs:domain :EDXLDistribution ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+edxl_cap:Immediate
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Urgency .
+
+:uri  a       owl:DatatypeProperty ;
+      rdfs:comment """A Uniform Resource Identifier that can be used to retrieve the identified resource.
+"""@en ;
+      rdfs:domain :OtherContent .
+
+:isConsumerRoleOf
+      a       owl:ObjectProperty ;
+      owl:inverseOf :hasConsumerRole .
+
+edxl_cap:Actual
+      a       owl:Class ;
+      rdfs:comment "\"Real-world\" information for action"@en ;
+      rdfs:subClassOf :DistributionStatus .
+
+:Confidentiality
+      a       owl:Class ;
+      rdfs:comment "Confidentiality of the combined distribution message’s content."@en .
+
+:Classified
+      a       owl:Class ;
+      rdfs:subClassOf :Confidentiality .
+
+edxl_cap:Urgency
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+:isRecipientRoleOf
+      a       owl:ObjectProperty ;
+      owl:inverseOf :hasRecipientRole .
+
+:contentData
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The base-64 encoded data content."@en ;
+      rdfs:domain :OtherContent .
+
+:Union
+      a       owl:Class ;
+      rdfs:subClassOf :AreaGrouping .
+
+edxl_cap:Extreme
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Severity .
+
+edxl_cap:UrgencyUnknown
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Urgency .
+
+:Unclassified
+      a       owl:Class ;
+      rdfs:subClassOf :Confidentiality .
+
+:OtherContent
+      a       owl:Class ;
+      rdfs:comment "Container para contéudo disponibilizado em um tipo não XML"@pt , "Container for content provided in a non-XML MIME type"@en ;
+      rdfs:subClassOf :ContentObject .
+
+:KeyXmlContent
+      a       owl:Class ;
+      rdfs:comment "Um container para fragmentos coletados de XML válido"@pt , "A container element for collected fragments of valid XML"@en ;
+      rdfs:subClassOf :ContentXML .
+
+:isDistribuitionKindOf
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionKind ;
+      rdfs:range :EDXLDistribution ;
+      owl:inverseOf :hasDistribuitionKind .
+
+:Content
+      a       owl:Class ;
+      rdfs:comment "Um recipiente para ContetObject e qualquer link entre eles."@pt , """A container for the ContentObject and any Links among content objects
+"""@en ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:minQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onClass :ContentObject ;
+                owl:onProperty :hasContentObject
+              ] .
+
+:Response
+      a       owl:Class ;
+      rdfs:comment "A response to a previous request"@en , "A resposta a uma requisição anterior."@pt ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update , :SensorControl , :SensorDetection , :SensorConfiguration .
+
+edxl_cap:Likely
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Certainty .
+
+edxl_cap:Moderate
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Severity .
+
+:dateTimeExpires
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The date and time the distribution message should expire."@en ;
+      rdfs:domain :EDXLDistribution ;
+      rdfs:range xsd:dateTime ;
+      rdfs:subPropertyOf :timePeriod .
+
+:hasAreaKind
+      a       owl:ObjectProperty ;
+      rdfs:domain :TargetAreas ;
+      rdfs:range :AreaKind ;
+      owl:inverseOf :isAreaKindOf .
+
+edxl_cap:Severe
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Severity .
+
+edxl_cap:Minor
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Severity .
+
+:keyword
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The topic related to the distribution message, as it may determine message routing decisions."@en ;
+      rdfs:domain :Descriptor ;
+      rdfs:range xsd:string .
+
+:isLinkedTo
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionDescriptor ;
+      rdfs:range :Content .
+
+edxl_cap:Future
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Urgency .
+
+:DistributionDescriptor
+      a       owl:Class ;
+      rdfs:subClassOf :Descriptor .
+
+:Dispatch
+      a       owl:Class ;
+      rdfs:comment "A commitment of resources or assistance"@en , "Um compromisso para recursos ou assistência"@pt ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update , :Report , :Error , :SensorControl , :SensorDetection , :SensorConfiguration , :Request , :Response .
+
+:SensorStatus
+      a       owl:Class ;
+      rdfs:comment "These are concise messages which report sensors/sensor concentrator component status or state of health."@en , "Mensagens concisas que relatam status ou estado de saúde de sensores/componentes concentrados de sensores."@pt ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :Update .
+
+:Update
+      a       owl:Class ;
+      rdfs:comment "Informação atualizada substituindo uma mensagem anterior."@pt , "Updated information superseding a previous message"@en ;
+      rdfs:subClassOf :DistributionKind .
+
+:OriginatorRole
+      a       owl:Class ;
+      rdfs:subClassOf :Role .
+
+:TargetAreas
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :hasTargetArea ;
+                            owl:someValuesFrom :TargetArea
+                          ] [ a       owl:Restriction ;
+                            owl:onClass :AreaGrouping ;
+                            owl:onProperty :hasAreaGrouping ;
+                            owl:qualifiedCardinality
+                                    "1"^^xsd:nonNegativeInteger
+                          ] [ a       owl:Restriction ;
+                            owl:onClass :AreaKind ;
+                            owl:onProperty :hasAreaKind ;
+                            owl:qualifiedCardinality
+                                    "1"^^xsd:nonNegativeInteger
+                          ])
+              ] .
+
+:ContentDescriptor
+      a       owl:Class ;
+      rdfs:comment "The description of the message content object"@en , "A descrição da mensagem Contet Object"@pt ;
+      rdfs:subClassOf :Descriptor .
+
+edxl_cap:isCertaintyOf
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+edxl_cap:Severity
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+:hasContentDescriptor
+      a       owl:ObjectProperty ;
+      rdfs:domain :ContentObject ;
+      rdfs:range :ContentDescriptor .
+
+:ExclusiveOr
+      a       owl:Class ;
+      rdfs:subClassOf :AreaGrouping .
+
+:hasRecipientRole
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionDescriptor ;
+      rdfs:range :RecipientRole .
+
+:isTargetAreasOf
+      a       owl:ObjectProperty ;
+      owl:inverseOf :hasTargetAreas .
+
+:isDistribuitionStatusOf
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionStatus ;
+      rdfs:range :EDXLDistribution ;
+      owl:inverseOf :hasDistribuitionStatus .
+
+:isConfidentialityOf
+      a       owl:ObjectProperty ;
+      owl:inverseOf :hasConfidentiality .
+
+:isDescriptorOf
+      a       owl:InverseFunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain :Descriptor ;
+      rdfs:range :EDXLDistribution ;
+      owl:inverseOf :hasDescriptor .
+
+:EDXLDistribution
+      a       owl:Class ;
+      rdfs:comment "A container of all of the elements related to the distribution of the content messages."@en , "Um recipiente de todos os elementos relacionados a distribuição do contéudo das mensagens."@pt ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onClass edxl_cap:Sender ;
+                            owl:onProperty edxl_cap:hasSender ;
+                            owl:qualifiedCardinality
+                                    "1"^^xsd:nonNegativeInteger
+                          ] [ a       owl:Restriction ;
+                            owl:onClass :DistributionKind ;
+                            owl:onProperty :hasDistribuitionKind ;
+                            owl:qualifiedCardinality
+                                    "1"^^xsd:nonNegativeInteger
+                          ] [ a       owl:Restriction ;
+                            owl:onClass :DistributionStatus ;
+                            owl:onProperty :hasDistribuitionStatus ;
+                            owl:qualifiedCardinality
+                                    "1"^^xsd:nonNegativeInteger
+                          ] [ a       owl:Restriction ;
+                            owl:maxQualifiedCardinality
+                                    "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :DistributionDescriptor ;
+                            owl:onProperty :hasDescriptor
+                          ])
+              ] .
+
+<http://fpc.ufba.br/ontologies/edxl_de>
+      a       owl:Ontology ;
+      edxl_cap:contributor
+              "Reinaldo Almeida (UFBA)"@en , "Rebeca Barros (UFBA)"@en , "Lais Salvador (UFBA)"@en ;
+      edxl_cap:rights "(c) The RESCUER project - http://www.rescuer-project.org/"@en ;
+      edxl_cap:status "An ongoing ontology for communication interoperability between systems in the context of the RESCUER Project. This propose is based on EDXL documentation (https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=emergency)."@en ;
+      owl:imports <http://fpc.ufba.br/ontologies/edxl_cap> .
+
+:senderRole
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The functional role of the sender, as it may determine message routing decisions. "@en ;
+      rdfs:domain edxl_cap:Sender .
+
+edxl_cap:hasUrgency
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionDescriptor ;
+      rdfs:range edxl_cap:Urgency ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf edxl_cap:isUrgencyOf .
+
+:incidentID
+      a       owl:DatatypeProperty ;
+      rdfs:domain edxl_cap:Incident ;
+      rdfs:range xsd:string .
+
+:explicitAddress
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The identifier of an explicit recipient"@en ;
+      rdfs:domain :Descriptor .
+
+edxl_cap:CertaintyUnknown
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Certainty .
+
+:hasConsumerRole
+      a       owl:ObjectProperty ;
+      rdfs:domain :ContentDescriptor ;
+      rdfs:range :ConsumerRole .
+
+edxl_cap:Incident
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+:hasIncidentRelated
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionDescriptor ;
+      rdfs:range edxl_cap:Incident .
+
+:hasConfidentiality
+      a       owl:ObjectProperty ;
+      rdfs:domain :Descriptor ;
+      rdfs:range :Confidentiality .
+
+edxl_cap:System
+      a       owl:Class ;
+      rdfs:comment "Messages regarding or supporting network functions"@en ;
+      rdfs:subClassOf :DistributionStatus .
+
+:hasOriginatorRole
+      a       owl:ObjectProperty ;
+      rdfs:domain :ContentDescriptor ;
+      rdfs:range :OriginatorRole .
+
+:isOriginatorRoleOf
+      a       owl:ObjectProperty ;
+      owl:inverseOf :hasOriginatorRole .
+
+:language
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The primary language (but not necessarily exclusive) used in the payloads"@en ;
+      rdfs:domain :Descriptor ;
+      rdfs:range xsd:language .
+
+:isContentObjectOf
+      a       owl:ObjectProperty ;
+      rdfs:domain :ContentObject ;
+      rdfs:range :Content ;
+      owl:inverseOf :hasContentObject .
+
+edxl_cap:SeverityUnknown
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Severity .
+
+edxl_cap:hasSeverity
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionDescriptor ;
+      rdfs:range edxl_cap:Severity ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf edxl_cap:isSeverityOf .
+
+:isAreaKindOf
+      a       owl:ObjectProperty .
+
+:AreaGrouping
+      a       owl:Class .
+
+:senderID
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The unique identifier of the sender."@en ;
+      rdfs:domain edxl_cap:Sender ;
+      rdfs:range xsd:string .
+
+edxl_cap:Possible
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Certainty .
+
+edxl_cap:hasCertainty
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionDescriptor ;
+      rdfs:range edxl_cap:Certainty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      owl:inverseOf edxl_cap:isCertaintyOf .
+
+:isAreaGroupingOf
+      a       owl:ObjectProperty ;
+      owl:inverseOf :hasAreaGrouping .
+
+:RecipientRole
+      a       owl:Class ;
+      rdfs:subClassOf :Role .
+
+:OtherGroupingType
+      a       owl:Class ;
+      rdfs:subClassOf :AreaGrouping .
+
+:DistributionStatus
+      a       owl:Class ;
+      rdfs:comment "A capacidade de ação da mensagem. "@en , "The action-ability of the message."@en .
+
+:isContentOf
+      a       owl:ObjectProperty ;
+      owl:inverseOf :hasContent .
+
+edxl_cap:isSeverityOf
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+:ContentXML
+      a       owl:Class ;
+      rdfs:comment """Conteiner para dados XML válidos com namespace. 
+
+"""@pt , "Container for valid-namespaced XML data"@en ;
+      rdfs:subClassOf :ContentObject .
+
+:hasDescriptor
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain :EDXLDistribution ;
+      rdfs:range :DistributionDescriptor .
+
+:Report
+      a       owl:Class ;
+      rdfs:comment "Nova informação a respeito de um incidente ou atividade."@pt , "New information regarding an incident or activity"@en ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update , :SensorControl , :SensorDetection , :SensorConfiguration , :Request , :Response .
+
+:ContentObject
+      a       owl:Class ;
+      rdfs:comment "O elemento recipiente para mensagens de dados e contéudo."@pt , "The container element for message data and content."@en .
+
+:mimeType
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The format of the payload."@en ;
+      rdfs:domain :OtherContent .
+
+:hasDistribuitionStatus
+      a       owl:ObjectProperty ;
+      rdfs:domain :EDXLDistribution ;
+      rdfs:range :DistributionStatus .
+
+:hasTargetAreas
+      a       owl:ObjectProperty ;
+      rdfs:domain :DistributionDescriptor ;
+      rdfs:range :TargetAreas .
+
+:ConsumerRole
+      a       owl:Class ;
+      rdfs:subClassOf :Role .
+
+:isIncidentRelatedOf
+      a       owl:ObjectProperty ;
+      rdfs:range :Descriptor ;
+      owl:inverseOf :hasIncidentRelated .
+
+:Role
+      a       owl:Class .
+
+:hasAreaGrouping
+      a       owl:ObjectProperty ;
+      rdfs:domain :TargetAreas ;
+      rdfs:range :AreaGrouping .
+
+:digest
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The digest value for the payload."@en ;
+      rdfs:domain :OtherContent .
+
+:hasTargetArea
+      a       owl:ObjectProperty ;
+      rdfs:domain :TargetAreas ;
+      rdfs:range :TargetArea .
+
+:Intersection
+      a       owl:Class ;
+      rdfs:subClassOf :AreaGrouping .
+
+:SensorDetection
+      a       owl:Class ;
+      rdfs:comment "Mensagens de alta prioridade que reporta detecção dos sensores."@pt , "These are high priority messages which report sensor detections."@en ;
+      rdfs:subClassOf :DistributionKind .
+
+edxl_cap:isUrgencyOf
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+:contentID
+      a       owl:DatatypeProperty ;
+      rdfs:domain :ContentDescriptor .
+
+:EmbeddedXmlContent
+      a       owl:Class ;
+      rdfs:comment """An open container for valid XML from an explicit namespaced XML Schema.
+"""@en , "Um container aberto para XML válido vindo de um explícito XML Schema namespaced."@pt ;
+      rdfs:subClassOf :ContentXML .
+
+:incidentDescription
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The human-readable text describing the incident/event/situation associated"@en ;
+      rdfs:domain edxl_cap:Incident ;
+      rdfs:range xsd:string .
+
+:isTargetAreaOf
+      a       owl:ObjectProperty ;
+      owl:inverseOf :hasTargetArea .
+
+edxl_cap:Expected
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Urgency .
+
+edxl_cap:Unlikely
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Certainty .
+
+:Cancel
+      a       owl:Class ;
+      rdfs:comment "Cancelamento ou revocação de uma mensagem anterior."@pt , "A cancellation or revocation of a previous message"@en ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update , :Report , :Error , :SensorControl , :SensorDetection , :SensorConfiguration , :Request , :Response , :Dispatch .
+
+edxl_cap:Past
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Urgency .
+
+edxl_cap:Observed
+      a       owl:Class ;
+      rdfs:subClassOf edxl_cap:Certainty .
+
+:Complement
+      a       owl:Class ;
+      rdfs:subClassOf :AreaGrouping .
+
+:size
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The file size of the payload."@en ;
+      rdfs:domain :OtherContent .
+
+:DistributionKind
+      a       owl:Class ;
+      rdfs:comment "The function of the message"@en , "A função da mensagem. "@pt .
+
+:hasContent
+      a       owl:ObjectProperty .
+
+:SensorControl
+      a       owl:Class ;
+      rdfs:comment "Mensagens usadas para controlar o comportamento de sensores/componentes concentrados de sensores."@pt , "These are messages used to control sensors/sensor concentrator components behavior"@en ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update .
+
+:dateTimeSent
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The date and time the distribution message was sent."@en ;
+      rdfs:domain :EDXLDistribution ;
+      rdfs:range xsd:dateTime ;
+      rdfs:subPropertyOf :timePeriod .
+
+:Descriptor
+      a       owl:Class ;
+      rdfs:comment """A container of all of the substantive elements related to describing the distribution of the content messages as a whole.
+"""@en , "Um recipiente de todos os elementos centrais relacionado com a descrição da distribuição das mensagens de conteúdo como um todo."@pt .
+
+edxl_cap:Exercise
+      a       owl:Class ;
+      rdfs:comment "Simulated information for exercise participants"@en ;
+      rdfs:subClassOf :DistributionStatus .
+
+edxl_cap:Sender
+      a       owl:Class .
+
+:Error
+      a       owl:Class ;
+      rdfs:comment "Rejection of an earlier message (for technical reasons)"@en , "Rejeição de uma mensagem anterior (por razões técnicas)"@pt ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update , :Report , :SensorControl , :SensorDetection , :SensorConfiguration , :Request , :Response .
+
+:TargetArea
+      a       owl:Class ;
+      rdfs:comment "The container element for location information"@en , "Conteiner para informação de localização."@pt .
+
+:isContentDescriptorOf
+      a       owl:ObjectProperty ;
+      rdfs:domain :ContentDescriptor ;
+      rdfs:range :ContentObject ;
+      owl:inverseOf :hasContentDescriptor .
+
+:AreaKind
+      a       owl:Class ;
+      rdfs:comment "Specifies the kind of area, for example “target” or “source”"@en .
+
+:contentDescription
+      a       owl:DatatypeProperty ;
+      rdfs:comment "The human-readable text describing the content object."@en ;
+      rdfs:domain :ContentDescriptor ;
+      rdfs:range xsd:string .
+
+:other
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Special requirements allowing for signature of the content of a <ContentObject>." ;
+      rdfs:domain :ContentObject .
+
+:hasContentObject
+      a       owl:ObjectProperty .
+
+edxl_cap:Certainty
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+:timePeriod
+      a       owl:DatatypeProperty .
+
+:SensorConfiguration
+      a       owl:Class ;
+      rdfs:comment "These messages are for reporting configuration during power up or after Installation or Maintenance."@en , "Mensagens para reportar configurações durante a inicialização ou após instalação ou manutenção."@pt ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update , :SensorControl .
+
+edxl_cap:hasSender
+      a       owl:ObjectProperty .
+
+:Request
+      a       owl:Class ;
+      rdfs:comment "A request for resources, information or action"@en , "Uma requisição por recursos, informações ou ações."@pt ;
+      rdfs:subClassOf :DistributionKind ;
+      owl:disjointWith :SensorStatus , :Update , :SensorControl , :SensorDetection , :SensorConfiguration , :Response .
+
+:hasDistribuitionKind
+      a       owl:ObjectProperty ;
+      rdfs:domain :EDXLDistribution ;
+      rdfs:range :DistributionKind ;
+      rdfs:subPropertyOf owl:topObjectProperty .
