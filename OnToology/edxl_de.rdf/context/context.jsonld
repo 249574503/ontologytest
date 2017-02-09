@@ -1,0 +1,436 @@
+{
+  "@context" : {
+    "hasRecipientRole" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasRecipientRole",
+      "@type" : "@id"
+    },
+    "Severity" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Severity"
+    },
+    "UrgencyUnknown" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#UrgencyUnknown"
+    },
+    "Union" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Union"
+    },
+    "Ack" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Ack"
+    },
+    "Expected" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Expected"
+    },
+    "KeyXmlContent" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#KeyXmlContent"
+    },
+    "isUrgencyOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#isUrgencyOf",
+      "@type" : "@id"
+    },
+    "Request" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Request"
+    },
+    "hasSender" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#hasSender",
+      "@type" : "@id"
+    },
+    "Cancel" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Cancel"
+    },
+    "ContentDescriptor" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#ContentDescriptor"
+    },
+    "timePeriod" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#timePeriod"
+    },
+    "Incident" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Incident"
+    },
+    "isDistribuitionStatusOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionStatusOf",
+      "@type" : "@id"
+    },
+    "dateTimeExpires" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#dateTimeExpires",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "Immediate" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Immediate"
+    },
+    "Exercise" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Exercise"
+    },
+    "hasContent" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasContent",
+      "@type" : "@id"
+    },
+    "isDistribuitionKindOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isDistribuitionKindOf",
+      "@type" : "@id"
+    },
+    "hasUrgency" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#hasUrgency",
+      "@type" : "@id"
+    },
+    "isAreaGroupingOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isAreaGroupingOf",
+      "@type" : "@id"
+    },
+    "Test" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Test"
+    },
+    "isOriginatorRoleOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isOriginatorRoleOf",
+      "@type" : "@id"
+    },
+    "EmbeddedXmlContent" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#EmbeddedXmlContent"
+    },
+    "Descriptor" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Descriptor"
+    },
+    "senderID" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#senderID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Past" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Past"
+    },
+    "isLinkedTo" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isLinkedTo",
+      "@type" : "@id"
+    },
+    "hasCertainty" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#hasCertainty",
+      "@type" : "@id"
+    },
+    "Urgency" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Urgency"
+    },
+    "DistributionKind" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#DistributionKind"
+    },
+    "OriginatorRole" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#OriginatorRole"
+    },
+    "OtherGroupingType" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#OtherGroupingType"
+    },
+    "uri" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#uri"
+    },
+    "isContentOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isContentOf",
+      "@type" : "@id"
+    },
+    "hasTargetAreas" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasTargetAreas",
+      "@type" : "@id"
+    },
+    "isSeverityOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#isSeverityOf",
+      "@type" : "@id"
+    },
+    "DistributionDescriptor" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#DistributionDescriptor"
+    },
+    "explicitAddress" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#explicitAddress"
+    },
+    "distributionID" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#distributionID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Severe" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Severe"
+    },
+    "Minor" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Minor"
+    },
+    "isConsumerRoleOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isConsumerRoleOf",
+      "@type" : "@id"
+    },
+    "isCertaintyOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#isCertaintyOf",
+      "@type" : "@id"
+    },
+    "SensorStatus" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#SensorStatus"
+    },
+    "contentDescription" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#contentDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Moderate" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Moderate"
+    },
+    "isConfidentialityOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isConfidentialityOf",
+      "@type" : "@id"
+    },
+    "isRecipientRoleOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isRecipientRoleOf",
+      "@type" : "@id"
+    },
+    "Report" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Report"
+    },
+    "Response" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Response"
+    },
+    "hasContentObject" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasContentObject",
+      "@type" : "@id"
+    },
+    "hasDistribuitionKind" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionKind",
+      "@type" : "@id"
+    },
+    "DistributionStatus" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#DistributionStatus"
+    },
+    "Future" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Future"
+    },
+    "ConsumerRole" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#ConsumerRole"
+    },
+    "Unlikely" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Unlikely"
+    },
+    "Role" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Role"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "Confidentiality" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Confidentiality"
+    },
+    "digest" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#digest"
+    },
+    "isContentObjectOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isContentObjectOf",
+      "@type" : "@id"
+    },
+    "Update" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Update"
+    },
+    "Sender" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Sender"
+    },
+    "Actual" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Actual"
+    },
+    "rights" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#rights"
+    },
+    "status" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#status"
+    },
+    "TargetAreas" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#TargetAreas"
+    },
+    "senderRole" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#senderRole"
+    },
+    "keyword" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#keyword",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "incidentID" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#incidentID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Intersection" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Intersection"
+    },
+    "hasAreaKind" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasAreaKind",
+      "@type" : "@id"
+    },
+    "Unclassified" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Unclassified"
+    },
+    "OtherContent" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#OtherContent"
+    },
+    "SeverityUnknown" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#SeverityUnknown"
+    },
+    "Classified" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Classified"
+    },
+    "Content" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Content"
+    },
+    "ExclusiveOr" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#ExclusiveOr"
+    },
+    "hasAreaGrouping" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasAreaGrouping",
+      "@type" : "@id"
+    },
+    "isAreaKindOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isAreaKindOf",
+      "@type" : "@id"
+    },
+    "Extreme" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Extreme"
+    },
+    "hasIncidentRelated" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasIncidentRelated",
+      "@type" : "@id"
+    },
+    "isIncidentRelatedOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isIncidentRelatedOf",
+      "@type" : "@id"
+    },
+    "isTargetAreaOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isTargetAreaOf",
+      "@type" : "@id"
+    },
+    "hasSeverity" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#hasSeverity",
+      "@type" : "@id"
+    },
+    "Likely" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Likely"
+    },
+    "contentData" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#contentData"
+    },
+    "contentID" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#contentID"
+    },
+    "hasDistribuitionStatus" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasDistribuitionStatus",
+      "@type" : "@id"
+    },
+    "Observed" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Observed"
+    },
+    "SensorConfiguration" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#SensorConfiguration"
+    },
+    "other" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#other"
+    },
+    "dateTimeSent" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#dateTimeSent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "CertaintyUnknown" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#CertaintyUnknown"
+    },
+    "SensorControl" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#SensorControl"
+    },
+    "incidentDescription" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#incidentDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AreaGrouping" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#AreaGrouping"
+    },
+    "SensorDetection" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#SensorDetection"
+    },
+    "hasTargetArea" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasTargetArea",
+      "@type" : "@id"
+    },
+    "RecipientRole" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#RecipientRole"
+    },
+    "Error" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Error"
+    },
+    "size" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#size"
+    },
+    "mimeType" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#mimeType"
+    },
+    "isTargetAreasOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isTargetAreasOf",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "TargetArea" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#TargetArea"
+    },
+    "ContentXML" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#ContentXML"
+    },
+    "language" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#language",
+      "@type" : "http://www.w3.org/2001/XMLSchema#language"
+    },
+    "Complement" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Complement"
+    },
+    "isDescriptorOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isDescriptorOf",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#contributor"
+    },
+    "hasConsumerRole" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasConsumerRole",
+      "@type" : "@id"
+    },
+    "System" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#System"
+    },
+    "hasConfidentiality" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasConfidentiality",
+      "@type" : "@id"
+    },
+    "EDXLDistribution" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#EDXLDistribution"
+    },
+    "hasDescriptor" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasDescriptor",
+      "@type" : "@id"
+    },
+    "Certainty" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Certainty"
+    },
+    "Dispatch" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#Dispatch"
+    },
+    "hasOriginatorRole" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasOriginatorRole",
+      "@type" : "@id"
+    },
+    "AreaKind" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#AreaKind"
+    },
+    "isContentDescriptorOf" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#isContentDescriptorOf",
+      "@type" : "@id"
+    },
+    "hasContentDescriptor" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#hasContentDescriptor",
+      "@type" : "@id"
+    },
+    "ContentObject" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_de#ContentObject"
+    },
+    "Possible" : {
+      "@id" : "http://fpc.ufba.br/ontologies/edxl_cap#Possible"
+    }
+  }
+}
